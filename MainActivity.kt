@@ -79,7 +79,6 @@ class MainActivity : ComponentActivity(), TextToSpeech.OnInitListener {
             onError("No speech recognition service is installed. Install an offline-capable recognizer or type your command.")
             return
         }
-        speech?.destroy()
         speech = if (Build.VERSION.SDK_INT >= 31 && SpeechRecognizer.isOnDeviceRecognitionAvailable(this))
             SpeechRecognizer.createOnDeviceSpeechRecognizer(this)
         else SpeechRecognizer.createSpeechRecognizer(this)
