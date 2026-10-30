@@ -35,7 +35,7 @@ jobs:
 
       - name: Extract JARVIS source
         run: |
-          unzip -q JARVIS-Core-Source.zip -d extracted
+          unzip -q JARVIS-Core-Source-Fixed.zip -d extracted
           PROJECT_DIR="$(find extracted -name settings.gradle.kts -print -quit | xargs dirname)"
           if [ -z "$PROJECT_DIR" ]; then
             echo "Could not find settings.gradle.kts in the ZIP."
